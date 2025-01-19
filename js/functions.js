@@ -32,6 +32,11 @@ window.onload = () => {
   // 画像要素
   const yacht = document.getElementById("yacht"); 
   const totalFrames = images.length; // フレームの数
+
+// デバイスによってendの値を動的に設定
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以外なら700
+
     // GSAPとScrollTriggerを使ってアニメーションを設定
   gsap.registerPlugin(ScrollTrigger);
   
@@ -39,7 +44,7 @@ window.onload = () => {
     scrollTrigger: {//進行状況を監視する役割
       trigger: ".animation-container", // トリガーとなる要素
       start: "center center", //animation-containerのtopがブラウザのcenterに来たらピン留め
-      end: "+=700", // ピン留め範囲 (スクロール量で調整)
+      end: endValue, // ピン留め範囲
       scrub: true, // スクロールに連動させる
       pin: true, // トリガー要素のピン留めを有効にする
       markers: true,
