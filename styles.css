@@ -7,7 +7,7 @@ html {
     width: 100vw;
     font-family: 'Noto Sans JP','NotoSansCJKjp','ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
     position: relative;
-    background-image: url('back-image.jpg'); /* 古い紙の画像 */
+    background-image: url('/images/back-image.jpg'); /* 古い紙の画像 */
     background-size: cover; /* 全体にフィットさせる */
     background-repeat: no-repeat; /* 繰り返しを防ぐ */
     background-position: center; /* 中央に配置 */
