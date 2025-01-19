@@ -19,7 +19,7 @@ html {
   
   .top {
     margin-top: 50px;
-    width: 100vw;
+    width: 100%;
     position: relative;
   }
   
@@ -236,4 +236,143 @@ html {
     position: absolute;
   }
 
-  
+@media (max-width: 768px) {
+
+    body {
+        background-position: center;
+      }
+    
+      .top {
+        margin-top: 30px; /* スマホ向けに余白を調整 */
+        width: 100%;
+      }
+    
+      .top img {
+        opacity: 1;
+        transform: scale(1); /* アニメーションの影響をなくす */
+        max-width: 100%; /* 画像が画面に収まるように調整 */
+        height: auto; /* 高さを自動調整 */
+      }
+    
+      .sub {
+        position: relative;
+        left: 35vw;
+        display: block;
+        width: 30vw; /* 画面サイズに合わせてサブ要素の幅を縮小 */
+        margin-top: -１vh;
+      }
+
+
+      .title-girl {
+        width: 50vw;
+        margin-top: -10vw;
+        margin-bottom: 0;
+        z-index: 2; /* 背景の画像より手前に表示 */
+        animation: none; /* アニメーションを解除 */
+      }
+    
+      .wave svg {
+        margin-top: -32vh;; /* 波の位置を調整 */
+        height: 210vh; /* スマホ向けに高さを調整 */
+      }
+    
+      .wave-bottom svg {
+        bottom: 0;
+        width: 100%;
+        height: 10vh; /* スマホ向けに波の高さを調整 */
+      }
+    
+      .intro {
+        font-size: 12px; /* スマホでは文字サイズを小さく */
+        margin-top: 1vh; /* 上の余白を調整 */
+        padding: 0 10px; /* 画面サイズに合わせて内側余白を調整 */
+        margin-bottom: 100vh;
+      }
+    
+      .shoukai {
+        display: block; /* スマホ向けにフレックスを解除し、縦並びに */
+        margin-top: -20vh;; /* 上に少し余白を追加 */
+      }
+    
+      .shoukaibun {
+        font-size: 20px;
+      }
+
+      .circle {
+        width: 50%; /* スマホに合わせて幅を調整 */
+        margin-bottom: 10px;
+      }
+    
+      .name {
+        font-size: 20px; /* 名前の文字サイズを小さく */
+      }
+
+      .minorishoukai {
+        margin-bottom: 15vh;
+      }
+
+      .wavegazou {
+        margin-top: 42vh;
+        width: %;
+        display: none;
+      }
+    
+      .interview {
+        padding-right: 12vw; /* 余白を調整 */
+        padding-top: 10vw;
+        padding-left: 12vw;
+        margin-left: 0; /* 左の余白を調整 */
+        margin-right: 0; /* 右の余白を調整 */
+      }
+    
+      .komidashi {
+        font-size: 20px; /* 見出しの文字サイズを小さく */
+        margin-top: 50px;
+        margin-left: 0;
+        margin-bottom: 50px;
+      }
+    
+      dl {
+        font-size: 12px; /* 説明文のフォントサイズを調整 */
+        line-height: 2;
+      }
+    
+      dt {
+        font-size: 12px; /* 見出しのフォントサイズを調整 */
+      }
+    
+      dd {
+        margin-left: 12px;
+      }
+    
+     
+    
+      .pressure {
+        width: 90%; /* 画面幅に合わせてサイズ調整 */
+        margin-left: 5vw;
+        margin-top: 5vh;
+      }
+    
+      .balance {
+        width: 90%; /* スマホの幅に合わせてサイズ調整 */
+        margin: 0 auto;
+      }
+    
+      .section {
+        flex-direction: column; /* スマホでは縦並びに */
+        margin-bottom: 40vh;
+      }
+    
+      .animation-container {
+        margin-top: -10vh;
+        height: 60vh; /* アニメーションのコンテナの高さを調整 */
+      }
+    
+      #yacht {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+      }
+    
+}
