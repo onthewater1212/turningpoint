@@ -47,7 +47,7 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
       end: endValue, // ピン留め範囲
       scrub: true, // スクロールに連動させる
       pin: true, // トリガー要素のピン留めを有効にする
-      markers: true,
+      markers: false,
      //srcを切り替え、スクロールするごとに呼び出される関数
       onUpdate: (self) => {//selfはScrolltriggerのこと
         const progress = self.progress;//スクロールトリガーの進行状況を表す
