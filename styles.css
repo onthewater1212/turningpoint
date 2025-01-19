@@ -123,12 +123,16 @@ html {
   .shoukaioya {
     height:90vh;
   }
+
+  .shoukaibun {
+    font-size: 22px;
+  }
    
   .shoukai {
     display: flex;
     justify-content: center;
     align-items: cener;
-    gap: 100px;
+    gap: 130px;
   }
   
   .circle {
