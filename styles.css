@@ -160,10 +160,11 @@ html {
     font-size: 30px;
     color:#2731AD;
     margin-top:100px;
-    font-weight: Medium;
+    font-weight: Bold;
     margin-left: -50px;
     margin-bottom: 100px;
     margin-top: 200px;
+
   }
   
 
@@ -334,7 +335,7 @@ html {
         margin-top: 50px;
         margin-left: 0;
         margin-bottom: 50px;
-        font-weight: bold;
+        font-weight:bold;
       }
     
       dl {

@@ -59,6 +59,25 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
       },
     },
   });
+
+  gsap.utils.toArray('.hidden-text').forEach((element) => {
+    gsap.fromTo(
+      element,
+      { opacity: 0, translateY: 50 }, // 初期状態（透明で下にずれている）
+      { 
+        opacity: 1, 
+        translateY: 0, 
+        duration: 1, 
+        ease: 'power2.out', 
+        scrollTrigger: {
+          trigger: element, // アニメーションを開始するトリガー要素
+          start: 'top 90%', // 要素の上端がビューポートの90%地点に来たら開始
+          end: 'top 60%', // 必要ならアニメーション範囲を指定
+          toggleActions: 'play none none reverse', // アニメーションの挙動
+        },
+      }
+    );
+  });
   
     //配列のインデックスは0から始まる
    
