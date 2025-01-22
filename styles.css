@@ -18,7 +18,6 @@ html {
   
   
   .top {
-    margin-top: 50px;
     width: 100%;
     position: relative;
   }
@@ -90,7 +89,7 @@ html {
   }
   
   .wave svg {
-      margin-top:-100px;
+      margin-top:60px;
       height: 230vh;
       width: 100%;
       position: absolute;
@@ -117,7 +116,7 @@ html {
   } 
   
   .reason {
-    margin-bottom: 30vh;
+    margin-bottom: 50vh;
   }
   
   .shoukaioya {
@@ -148,16 +147,42 @@ html {
     margin: 0 auto;
   }
   
-  
+  #table-of-contents {
+    width: 25vw;
+    height: 70vh;
+    background-image: url('images/mokuji.png');
+    background-size: cover;
+    background-position: center;
+    color: #2731AD;
+    font-weight: bold;
+  }
+
+
+  .mokuji {
+    list-style: none; /* リストマーカーを非表示にする */
+    margin-left: 7vw;
+    padding-top: 26vh;
+  }
+
+  a {
+    color: #2731AD;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Zen Kaku Gothic New";
+    line-height: 2.5;
+  }
+
   .interview {
-      padding-right: 25vw; /* 内側の余白を追加 */
-      padding-top: 20vw;
-      padding-left: 25vw;
-      margin-top: -60vh;
-      margin-left: 100px; /* 左側の外側余白を追加 */
-      margin-right: 100px; /* 右側の外側余白を追加 */
-      position: relative;
-      z-index: 2;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+  }
+
+  #table-of-contents.fixed {
+    position: fixed;
+    top: 30px;
   }
   
   .komidashi {
@@ -194,17 +219,16 @@ html {
   }
   
   dt {
+    display: block;
     font-weight: bold;
     text-align: left;
-    margin-right: -30px;
     margin-bottom: 10px;
-    flex: 0 0 150px; /* dtの幅を指定、固定幅にする */
+    flex: 0 0 100px; /* dtの幅を指定、固定幅にする */
   }
   
   dd {
+    display: block;
     margin-left: 0;
-    text-align: left;
-    padding-left: 20px;
     flex: 1; /* ddが残りのスペースを占める */
   }
   

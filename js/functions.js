@@ -80,4 +80,17 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
   });
   
     //配列のインデックスは0から始まる
-   
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const toc = document.getElementById("table-of-contents");
+  const tocOffsetTop = toc.offsetTop;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > tocOffsetTop) {
+      toc.classList.add("fixed");
+    } else {
+      toc.classList.remove("fixed");
+    }
+  });
+});
