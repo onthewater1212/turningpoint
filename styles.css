@@ -95,7 +95,7 @@ html {
   
   .wave svg {
       margin-top:60px;
-      height: 230vh;
+      height: 200vh;
       width: 100%;
       position: absolute;
       z-index: 1;
@@ -114,14 +114,14 @@ html {
       color: rgb( 253, 242, 208);
       position: relative;
       text-align: center;
-      margin-top: 50vh;
+      margin-top: 60vh;
       font-family: 'Zen Kaku Gothic New';
       font-weight: Medium;
       font-size: 20px;
   } 
   
   .reason {
-    margin-bottom: 50vh;
+    margin-bottom: 10vh;
   }
   
   .shoukaioya {
@@ -157,19 +157,20 @@ html {
     align-items: flex-start; /* 縦方向に上に揃える */
     padding: 20px;
     position: relative;
+    gap: 100px;
   }
   
   #table-of-contents {
     position: sticky;
     top: 30px; /* スクロール中に固定する位置 */
-    left: 0; /* 左端に配置 */
+    left: 0;
     width: 300px;
     height: 700px;
     background-image: url('images/mokuji.png');
     background-size: cover;
     background-position: center;
     padding: 20px;
-    z-index: 1;
+    z-index: 10;
   }
   
   .mokuji {
@@ -216,7 +217,7 @@ html {
     color: #2731AD;
     line-height: 2.5;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
   }
   
 
@@ -261,7 +262,7 @@ dd {
   
   .animation-container {
     margin-top: -20vh;
-    margin-bottom: 20vh;
+    margin-bottom: 5vh;
     position: relative;
     width: 100%;
     height: 80vh;
