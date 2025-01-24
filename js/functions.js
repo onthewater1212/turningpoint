@@ -28,9 +28,23 @@ window.onload = () => {
     "/images/yacht9.png",
     "/images/yacht10.png",
   ];
+
+  const images2 = [
+  "/images/vs1.png",
+  "/images/vs2.png",
+  "/images/vs3.png",
+  "/images/vs4.png",
+  "/images/vs5.png",
+  "/images/vs6.png",
+  "/images/vs7.png",
+  "/images/vs8.png",
+  "/images/vs9.png",
+  "/images/vs10.png",
+  ];
   
   // 画像要素
   const yacht = document.getElementById("yacht"); 
+  const vs = document.getElementById("vs"); 
   const totalFrames = images.length; // フレームの数
 
 // デバイスによってendの値を動的に設定
@@ -56,6 +70,7 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
           Math.floor(progress * totalFrames)//小数点以下切り捨て進行度に応じたフレーム番号を計算
         );
         yacht.src = images[frameIndex];//画像を新しいファイルに置き換え
+        vs.src = images2[frameIndex];
       },
     },
   });

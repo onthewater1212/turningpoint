@@ -27,42 +27,7 @@ html {
     position: relative;
   }
   
-  .top img{
-    opacity: 0; /* 初期状態で非表示 */
-    transform: scale(0.5); /* 初期状態で小さく */
-    animation: zoomIn 1s ease-out forwards; /* アニメーション */
-  }
-  
-  @keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.5); /* 初期状態は小さく */
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2); /* 一時的に拡大 */
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1); /* 最終的に元のサイズ */
-    }
-  }
-  
-  /* 順番に表示するための遅延設定 */
-  
-  
-  .title-girl {
-    animation-delay: 0.4s;
-  }
-  
-  .sub {
-    animation-delay: 0.8s;
-  }
-  
-  .title-moji {
-    animation-delay: 1.2s;
-  }
-  
+ 
   .sub {
     position: absolute;
     top: 0;
@@ -92,7 +57,8 @@ html {
       transform: translateY(20px);
     }
   }
-  
+
+
   .wave svg {
       margin-top:60px;
       height: 200vh;
@@ -261,7 +227,7 @@ dd {
   }
   
   .animation-container {
-    margin-top: -20vh;
+    margin-top: -10vh;
     margin-bottom: 5vh;
     position: relative;
     width: 100%;
@@ -270,6 +236,13 @@ dd {
   }
   
    #yacht {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+  }
+
+  #vs {
     width: 100%;
     height: auto;
     object-fit: contain;
