@@ -69,8 +69,25 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
           totalFrames - 1,// 計算結果が配列の範囲を越えないように制限
           Math.floor(progress * totalFrames)//小数点以下切り捨て進行度に応じたフレーム番号を計算
         );
-        yacht.src = images[frameIndex];//画像を新しいファイルに置き換え
+
+        console.log(`Frame Index: ${frameIndex}, Yacht Image: ${images[frameIndex]}`);
+        console.log(`Frame Index: ${frameIndex}, VS Image: ${images2[frameIndex]}`);
+  
+
+        console.log(`Frame Index: ${frameIndex}, Yacht Image: ${images[frameIndex]}`);
+      console.log(`Frame Index: ${frameIndex}, VS Image: ${images2[frameIndex]}`);
+
+      if (yacht) {
+        yacht.src = images[frameIndex];
+      } else {
+        console.error("Yacht element not found!");
+      }
+
+      if (vs) {
         vs.src = images2[frameIndex];
+      } else {
+        console.error("VS element not found!");
+      }
       },
     },
   });
@@ -82,7 +99,7 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
       endTrigger: ".interview",
       end: "bottom top", // トリガー終了位置
       pin: true, // 要素を固定する
-      scrub: true, // スクロールに連動する
+      scrub: false, // スクロールに連動する
     },
   });
   

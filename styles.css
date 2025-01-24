@@ -358,7 +358,7 @@ dd {
       }
     
       .interview {
-        width: auto;
+        width: 100%;
         padding-right: 10vw; /* 余白を調整 */
         padding-top: 20vh;
         padding-left: 10vw;
@@ -378,17 +378,20 @@ dd {
       }
     
       dl{
-        gap: 0;
+        gap: 10px;
       }
 
       dt {
+        flex: 0 0 100px;
         margin-right: -25px;
+      
       }
     
       dd {
         font-size: px;
         margin-left:0px;
-      }
+        flex: 1;
+      } 
     
      
     
