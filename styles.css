@@ -126,7 +126,7 @@ html {
     gap: 100px;
   }
   
-  #table-of-contents {
+  .table-of-contents {
     position: sticky;
     top: 30px; /* スクロール中に固定する位置 */
     left: 0;
@@ -209,8 +209,7 @@ dd {
     width: 85%; /* 幅を100%に設定、または任意のサイズに変更 */
     height: auto; /* 高さを自動調整 */
     margin-left: 3vw;
-    margin-top: 10vh;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
   }
 
   
@@ -287,7 +286,7 @@ dd {
       }
     
       .wave svg {
-        margin-top: -32vh;; /* 波の位置を調整 */
+        margin-top: -23vh;; /* 波の位置を調整 */
         height: 210vh; /* スマホ向けに高さを調整 */
       }
     
@@ -340,7 +339,7 @@ dd {
         padding: 0;
       }
 
-      #table-of-contents {
+      .table-of-contents {
         display: none;
       }
     
@@ -407,5 +406,11 @@ dd {
         object-fit: contain;
         position: relative;
       }
-    
+
+      #vs {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+      }
 }

@@ -75,6 +75,19 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
     },
   });
 
+  gsap.to(".table-of-contents", {
+    scrollTrigger: {
+      trigger: ".table-of-contents", // トリガーとなる要素
+      start: "top top", // トリガー開始位置
+      endTrigger: ".interview",
+      end: "bottom top", // トリガー終了位置
+      pin: true, // 要素を固定する
+      scrub: true, // スクロールに連動する
+    },
+  });
+  
+
+  //文字をふわっとだす
   window.addEventListener('load', () => {
   gsap.utils.toArray('.hidden-text').forEach((element) => {
     gsap.fromTo(
@@ -90,7 +103,7 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
           start: 'top 90%', // 要素の上端がビューポートの90%地点に来たら開始
           end: 'top 60%', 
           toggleActions: 'play none none reverse', // アニメーションの挙動
-          markers: true,
+          markers: false,
         },
       }
     );
@@ -100,17 +113,4 @@ ScrollTrigger.refresh();
 });
   
     //配列のインデックスは0から始まる
-
-// script.js
-document.addEventListener("DOMContentLoaded", () => {
-  const toc = document.getElementById("table-of-contents");//変数に格納
-  const tocOffsetTop = toc.offsetTop;//toc 要素の 親要素の上端からの距離を取得
-
-  window.addEventListener("scroll", () => {//スクロールのたびに実行される
-    if (window.scrollY > tocOffsetTop) {//現在のスクロール位置（ページの最上部からのピクセル数）を取得
-      toc.classList.add("fixed");//固定
-    } else {
-      toc.classList.remove("fixed");//固定を削除
-    }
-  });
-});
+//目次固定
