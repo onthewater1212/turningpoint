@@ -1,9 +1,11 @@
-window.onload = () => {
-    const images = document.querySelectorAll('.scroll-image');
-    images.forEach((img, index) => {
-        img.style.animationDelay = `${index * 0.5}s`; // 各画像が少しずつずれてアニメーション
+
+
+  document.querySelector(".scroll-image").addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // スムーズにスクロール
     });
-  };
+  });
   
   $(document).ready(function() {
       $('#wave, #wave-bottom').wavify({
@@ -43,7 +45,8 @@ window.onload = () => {
   ];
   
   // 画像要素
-  const yacht = document.getElementById("yacht"); 
+ 
+  const yacht = document.getElementById("yacht");
   const vs = document.getElementById("vs"); 
   const totalFrames = images.length; // フレームの数
 
@@ -51,12 +54,16 @@ window.onload = () => {
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以外なら700
 
+if (yacht) {
+  yacht.src = images[0];
+}
+
     // GSAPとScrollTriggerを使ってアニメーションを設定
   gsap.registerPlugin(ScrollTrigger);
-  
+ // vsのアニメーショn
   gsap.to({}, {// アニメーションさせる要素は特定じゃないからなし
     scrollTrigger: {//進行状況を監視する役割
-      trigger: ".animation-container", // トリガーとなる要素
+      trigger: ".vs-container", // トリガーとなる要素
       start: "center center", //animation-containerのtopがブラウザのcenterに来たらピン留め
       end: endValue, // ピン留め範囲
       scrub: true, // スクロールに連動させる
@@ -64,33 +71,48 @@ const endValue = isMobile ? "+=500" : "+=700"; // スマホなら500、それ以
       markers: false,
      //srcを切り替え、スクロールするごとに呼び出される関数
       onUpdate: (self) => {//selfはScrolltriggerのこと
+        console.log("ScrollTrigger progress:", self.progress); // 進行状況を確認
         const progress = self.progress;//スクロールトリガーの進行状況を表す
         const frameIndex = Math.min(
           totalFrames - 1,// 計算結果が配列の範囲を越えないように制限
           Math.floor(progress * totalFrames)//小数点以下切り捨て進行度に応じたフレーム番号を計算
         );
-
-        console.log(`Frame Index: ${frameIndex}, Yacht Image: ${images[frameIndex]}`);
-        console.log(`Frame Index: ${frameIndex}, VS Image: ${images2[frameIndex]}`);
-  
-
-        console.log(`Frame Index: ${frameIndex}, Yacht Image: ${images[frameIndex]}`);
-      console.log(`Frame Index: ${frameIndex}, VS Image: ${images2[frameIndex]}`);
-
-      if (yacht) {
-        yacht.src = images[frameIndex];
-      } else {
-        console.error("Yacht element not found!");
+        if (vs) {
+          vs.src = images2[frameIndex];
+          console.log(`VS src updated to: ${images2[frameIndex]}`);
       }
-
-      if (vs) {
-        vs.src = images2[frameIndex];
-      } else {
-        console.error("VS element not found!");
-      }
-      },
+    },
     },
   });
+
+  
+  //ヨットのアニメーション
+  gsap.to({}, {// アニメーションさせる要素は特定じゃないからなし
+    scrollTrigger: {//進行状況を監視する役割
+      trigger: ".yacht-container", // トリガーとなる要素
+      start: "center center", //animation-containerのtopがブラウザのcenterに来たらピン留め
+      end: endValue, // ピン留め範囲
+      scrub: true, // スクロールに連動させる
+      pin: true, // トリガー要素のピン留めを有効にする
+      pinSpacer: false, // pin-spacerの生成を防ぐ
+      markers: true,
+     //srcを切り替え、スクロールするごとに呼び出される関数
+      onUpdate: (self) => {//selfはScrolltriggerのこと
+        console.log("ScrollTrigger progress:", self.progress); // 進行状況を確認
+        const progress = self.progress;//スクロールトリガーの進行状況を表す
+        const frameIndex = Math.min(
+          totalFrames - 1,// 計算結果が配列の範囲を越えないように制限
+          Math.floor(progress * totalFrames)//小数点以下切り捨て進行度に応じたフレーム番号を計算
+        );
+        if (yacht) {
+          yacht.src = images[frameIndex];
+          console.log(`Yacht src updated to: ${images[frameIndex]}`);
+        }
+      }
+    },
+  });
+
+  // vsのアニメーショ
 
   gsap.to(".table-of-contents", {
     scrollTrigger: {
