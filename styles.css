@@ -397,6 +397,18 @@ dd {
         padding-top: 20vh;
         padding-left: 10vw;
       }
+
+      .scroll-container {
+        position: fixed;
+        bottom: 3vh;
+        right: 2vw;
+        width: 70px;
+        height: auto;
+        opacity: 1;
+      }
+
+
+      
     
       .komidashi {
         font-size: 15px; /* 見出しの文字サイズを小さく */
