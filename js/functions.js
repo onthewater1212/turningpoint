@@ -6,6 +6,17 @@
       behavior: "smooth", // スムーズにスクロール
     });
   });
+
+  document.addEventListener("scroll", function() {
+    let scrollContainer = document.querySelector(".scroll-container");
+    let triggerHeight = 800; // どの高さから固定するか
+
+    if (window.scrollY > triggerHeight) {
+        scrollContainer.classList.add("fixed");
+    } else {
+        scrollContainer.classList.remove("fixed");
+    }
+});
   
   $(document).ready(function() {
       $('#wave, #wave-bottom').wavify({
