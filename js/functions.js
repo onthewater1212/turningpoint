@@ -1,11 +1,9 @@
 
-//topへをクリックしたら一番上に
 document.querySelector(".scroll-image").addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // スムーズにスクロール
-  });
+  document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+  document.body.scrollTo({ top: 0, behavior: "smooth" }); // 必要に応じて body にも対応
 });
+
 
 // topへを途中から固定
 document.addEventListener("scroll", function() {

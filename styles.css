@@ -12,7 +12,6 @@ body {
   background-size: cover; /* 全体にフィットさせる */
   background-repeat: no-repeat; /* 繰り返しを防ぐ */
   background-position: center; /* 中央に配置 */
-  color: #3e3e3e; /* 紙に合う文字色 */
   margin: 0;
   padding: 0;
   width: 100%;
@@ -123,6 +122,7 @@ body {
   align-items: flex-start; /* 縦方向に上に揃える */
   padding: 20px;
   gap: 150px;
+  color: #2731AD;
 }
 
 .table-of-contents {
@@ -183,7 +183,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-
 }
 
 .scroll-container.fixed {
@@ -194,8 +193,6 @@ body {
 
 .komidashi {
   font-size: 30px;
-  color: #2731AD;
-  margin-top: 100px;
   font-weight: Bold;
   margin-left: -40px;
   margin-bottom: 100px;
@@ -205,14 +202,12 @@ body {
 .hidden-text {
   font-family: "Zen Kaku Gothic New";
   font-size: 18px;
-  color: #2731AD;
   line-height: 2.5;
   margin: 0;
   padding-bottom: 50px;
   opacity: 0;
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
-
 
 
 dl {
@@ -405,11 +400,9 @@ dd {
         width: 70px;
         height: auto;
         opacity: 1;
+        transition: none;
       }
 
-
-      
-    
       .komidashi {
         font-size: 15px; /* 見出しの文字サイズを小さく */
         margin-top: 50px;
