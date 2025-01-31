@@ -315,14 +315,6 @@ dd {
         position: relative;;
       }
 
-      @keyframes moveUpDown {
-        0%, 100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(20px);
-        }
-      }
     
       .wave svg {
         margin-top: -20vh;; /* 波の位置を調整 */
@@ -432,8 +424,6 @@ dd {
         margin-left:0px;
         flex: 1;
       } 
-    
-     
     
       .pressure {
         width: 90%; /* 画面幅に合わせてサイズ調整 */
