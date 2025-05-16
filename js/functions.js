@@ -78,7 +78,7 @@ if (yacht) {
       end: "+=700", // ピン留め範囲
       scrub: true, // スクロールに連動させる
       pin: true, // トリガー要素のピン留めを有効にする
-      markers: true,
+      markers: false,
      //srcを切り替え、スクロールするごとに呼び出される関数
       onUpdate: (self) => {//selfはScrolltriggerのこと
         console.log("ScrollTrigger progress:", self.progress); // 進行状況を確認
